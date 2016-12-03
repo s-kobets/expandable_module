@@ -21,14 +21,14 @@ let Button = {
     e = e || window.event;
     let src = e.target || e.srcElement;
 
-    console.log(e, src);
+    Ajax.init();
   },
 
   click: function () {
     const button = document.getElementById('button');
     button.addEventListener('click', this.myFunc);
     const ajax = document.getElementById('ajax');
-    button.addEventListener('click', this.myAjax);
+    ajax.addEventListener('click', this.myAjax);
   }
 }
 
